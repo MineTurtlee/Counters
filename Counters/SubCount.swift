@@ -27,7 +27,7 @@ struct SubCount: View {
             Text("Current number: \(counter)")
                 .foregroundColor(.gray)
         }
-        .navigationTitle("Subtraction Counter")
+        .navigationTitle("Decremental Counter")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

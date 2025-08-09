@@ -11,16 +11,28 @@ import SwiftData
 
 
 struct ContentView: View {
+    @State var ResetButtonClicked = false
     var body: some View {
         NavigationStack {
             List {
-                NavigationLink("Addition Counter", destination: AddCount())
-                NavigationLink("Subtraction Counter", destination: SubCount())
+                NavigationLink("Incremental Counter", destination: AddCount())
+                NavigationLink("Decremental Counter", destination: SubCount())
                 NavigationLink("\"Restore In Progress\" Counter", destination: RestoreCount())
                 NavigationLink("Haptic Counters", destination: HapticCount())
                 NavigationLink("Hello World Screen", destination: HelloWorld())
+                NavigationLink("Multiplication Count", destination: MultiCount())
             }
             .navigationTitle("Counters")
+            List {
+                Button(action: {
+                    ResetButtonClicked = true
+                }, label: {
+                    Text("Reset...")
+                })
+                .popover(isPresented: $ResetButtonClicked) {
+                    ResetSelector()
+                }
+            }
         }
     }
 }
