@@ -43,6 +43,7 @@ jobs:
           mkdir Payload
           cp -R Counters.app Payload
           zip -r Counters.ipa Payload
+          ls
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
