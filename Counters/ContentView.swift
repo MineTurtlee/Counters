@@ -29,7 +29,7 @@ struct ContentView: View {
                     }, label: {
                         Text("Reset...")
                     })
-                    .popover(isPresented: $ResetButtonClicked) {
+                    .sheet(isPresented: $ResetButtonClicked) {
                         ResetSelector()
                     }
                 }
