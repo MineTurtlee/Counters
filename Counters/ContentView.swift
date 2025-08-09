@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section(header: Text("")) {
+                Section(header: Text("").hidden()) {
                     NavigationLink("Incremental Counter", destination: AddCount())
                     NavigationLink("Decremental Counter", destination: SubCount())
                     NavigationLink("\"Restore In Progress\" Counter", destination: RestoreCount())
@@ -23,7 +23,7 @@ struct ContentView: View {
                     NavigationLink("Hello World Screen", destination: HelloWorld())
                     NavigationLink("Multiplication Count", destination: MultiCount())
                 }
-                Section(header: Text("")) {
+                Section(header: Text("").hidden) {
                     Button(action: {
                         ResetButtonClicked = true
                     }, label: {
