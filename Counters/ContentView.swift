@@ -34,8 +34,8 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("Counters")
         }
-        .navigationTitle("Counters")
     }
 }
 
