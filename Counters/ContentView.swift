@@ -23,7 +23,7 @@ struct ContentView: View {
                     NavigationLink("Hello World Screen", destination: HelloWorld())
                     NavigationLink("Multiplication Count", destination: MultiCount())
                 }
-                Section(header: Text("").hidden) {
+                Section(header: Text("").hidden()) {
                     Button(action: {
                         ResetButtonClicked = true
                     }, label: {
